@@ -1,0 +1,141 @@
+{
+  "project": "BSP-DP on RoboCasa TurnOffMicrowave",
+  "task": "TurnOffMicrowave",
+  "behavior": "press stop button; microwave off and gripper away from button",
+  "baseline": "official BSP-DP UNet",
+  "reference": "dense DP with matched encoder, split, optimizer budget and evaluation states",
+  "paper": {
+    "url": "https://arxiv.org/html/2607.09648v1",
+    "table": "2(a)",
+    "dense_dp_success_rate": 0.77,
+    "bsp_dp_success_rate": 0.89,
+    "exact_robocasa_version": "not stated in paper",
+    "exact_dataset": "not stated in paper",
+    "training_epochs": "not stated for this simulation task"
+  },
+  "sources": {
+    "bsp": {
+      "repository": "https://github.com/B-spline-policy/bspline-policy",
+      "commit": "61ed5f42fced971d50a89b46417493790876ccd1"
+    },
+    "robocasa": {
+      "repository": "https://github.com/robocasa/robocasa",
+      "commit": "456174f62b89b8fca99eaaf33949c29fec9cfc2a",
+      "version": "1.0.1",
+      "role": "pinned candidate environment; not certified paper version"
+    }
+  },
+  "representation": {
+    "degree": 3,
+    "parameter_rows": 16,
+    "boundary_support_rows": 6,
+    "fit_max_error": 0.002,
+    "predict_knots": true,
+    "simulation_segment_alignment": false,
+    "action_space": "delta end-effector; confirm dimensions/controller from chosen dataset"
+  },
+  "proposed_training": {
+    "status": "proposal; dataset and simulation adapter not yet ready",
+    "seed": 42,
+    "augmentation": "none in initial baseline",
+    "precision": "fp16 with GradScaler after numerical smoke test",
+    "per_gpu_batch": 4,
+    "observation_steps": 2,
+    "unet_down_dims": [
+      256,
+      512,
+      1024
+    ],
+    "diffusion_step_embed_dim": 128,
+    "inference_steps": 16,
+    "learning_rate": 0.0001,
+    "full_dataset_first": true,
+    "num_epochs": null,
+    "camera_keys": null,
+    "image_size": null
+  },
+  "evaluation": {
+    "report": [
+      "success_rate",
+      "per_episode_outcome",
+      "completion_steps",
+      "inference_latency"
+    ],
+    "paired_initial_states": true,
+    "paired_policy_seeds": true,
+    "checkpoint_selection": "validation only",
+    "final_rollouts_proposed": 200
+  },
+  "hardware": {
+    "node_count": 1,
+    "gpu_count": 8,
+    "gpu": "RTX 2080 Ti",
+    "vram_gb_each": 11,
+    "first_stage": "one GPU smoke test; then independent seeds/ablations"
+  },
+  "pending": [
+    "Choose and validate the dataset and matching RoboCasa/robosuite/MuJoCo versions.",
+    "Download required scene/fixture assets and verify environment reset/step/render.",
+    "Implement Microwave dataset and runner adapters; published BSP task configs target real data.",
+    "Resolve and test spline local segment boundary/decoding mismatch before rollout.",
+    "Verify action dimensions, normalization, knot units, sampling frequency and execution span.",
+    "Measure single-GPU FP16 peak VRAM and throughput before long training."
+  ],
+  "selected_dataset": {
+    "path": "/mnt/pfs/pfs-yc2F4O/ouyangxiao/xemb-new/experimental/bsp-robocasa-microwave/data/turn_off_microwave_human_im_indexed.hdf5",
+    "source_url": "https://utexas.box.com/shared/static/0drm2h7fgd5857x8xgcj1lph23srpbj1.hdf5",
+    "registry": "robocasa tag v0.2 registry; data path v0.1/single_stage/kitchen_microwave/TurnOffMicrowave/2024-04-25",
+    "original_sha256": "7538634e66b0a0c70735c47ba33007d7d1de348f00ce93f11dba8cf1d2f9707a",
+    "n_demos": 54,
+    "train_demos": 49,
+    "validation_demos": 5,
+    "frames": 11827,
+    "action_dim": 12,
+    "cameras": 3,
+    "resolution": [
+      128,
+      128
+    ],
+    "dataset_env_version": "robosuite 1.4.1",
+    "control_freq_hz": "not explicitly stored; must verify before rollout",
+    "adaptation": "rename demo groups only; preserve all trajectories"
+  },
+  "actual_training": {
+    "models": [
+      "dense_dp",
+      "bsp_dp"
+    ],
+    "gpus": [
+      0,
+      2
+    ],
+    "batch_size": 64,
+    "epochs": 601,
+    "precision": "FP32 as upstream workspace",
+    "learning_rate": 0.0001,
+    "warmup_steps": 500,
+    "lr_schedule": "cosine",
+    "seed": 42,
+    "validation_ratio": 0.1,
+    "prediction_horizon_or_parameter_rows": 16,
+    "crop_shape": [
+      116,
+      116
+    ],
+    "random_crop": "upstream CropRandomizer behavior retained",
+    "use_ema": true,
+    "checkpoint_every_epochs": 20,
+    "checkpoint_selection": "top 3 by validation loss plus latest",
+    "rollout": "separate from training; simulator not yet verified",
+    "upstream_core_modified": false,
+    "batch8_archive": "/mnt/pfs/pfs-yc2F4O/ouyangxiao/xemb-new/experimental/bsp-robocasa-microwave/outputs/archive_batch8_1790934392",
+    "restart": "fresh initialization"
+  },
+  "node_dependencies": {
+    "directory": "/tmp/bsp-microwave-deps",
+    "robomimic": "0.2.0",
+    "imagecodecs": "2024.12.30",
+    "pytorch3d": "v0.7.7 pure Python transforms/common only",
+    "shared_environment_modified": false
+  }
+}

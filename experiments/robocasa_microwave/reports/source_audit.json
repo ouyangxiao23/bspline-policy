@@ -1,0 +1,31 @@
+{
+  "status": "source_audit_passed",
+  "checks": {
+    "bsp_policy": {
+      "path": "third_party/bsp/bspline_policy/bspline_policy/policy/diffusion_unet_bspline_image_policy.py",
+      "sha256": "a83c1c759bf0243e3f81b57435dfe16662734551860d1c01e4ec33cc2e505852"
+    },
+    "bsp_representation": {
+      "path": "third_party/bsp/bspline_policy/bspline_policy/common/bspline_action.py",
+      "sha256": "75b40eb7fd4607e86a0b5b5f45dd9d4761db73f85c0d0d8ada6ea8a69b357bc4"
+    },
+    "bsp_training_config": {
+      "path": "third_party/bsp/bspline_policy/bspline_policy/config/train_diffusion_unet_real_hybrid_bspline_workspace.yaml",
+      "sha256": "3b5d5ded978249e485cd84346e4bb1bd3b656fe6718ce86339e97a4aaafefbcf"
+    },
+    "microwave_task": {
+      "path": "third_party/robocasa/robocasa/environments/kitchen/atomic/kitchen_microwave.py",
+      "sha256": "acd9aa8ab1b55118923d3835388defaf21b28059919a5f7806e43866db868add"
+    },
+    "dataset_registry": {
+      "path": "third_party/robocasa/robocasa/utils/dataset_registry.py",
+      "sha256": "23e8e31bb56bae80de86c34eafadfe32dd1e1eba6608376152ba9fdda5532a4b"
+    }
+  },
+  "does_not_verify": [
+    "simulator compatibility",
+    "dataset availability",
+    "BSP rollout correctness",
+    "training convergence"
+  ]
+}

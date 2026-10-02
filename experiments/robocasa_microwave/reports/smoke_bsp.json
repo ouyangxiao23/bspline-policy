@@ -1,0 +1,21 @@
+{
+  "model": "bsp",
+  "status": "passed",
+  "loss": 1.1568645238876343,
+  "samples": 10527,
+  "validation_samples": 1246,
+  "parameters": 102757865,
+  "peak_allocated_gib": 3.036710739135742,
+  "peak_reserved_gib": 3.8515625,
+  "seconds": 2.291706085205078,
+  "action_shape": [
+    64,
+    16,
+    13
+  ],
+  "prediction_shape": [
+    64,
+    16,
+    13
+  ]
+}

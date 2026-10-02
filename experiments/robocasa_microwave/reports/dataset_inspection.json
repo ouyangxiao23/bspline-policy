@@ -1,0 +1,476 @@
+{
+  "path": "/mnt/pfs/pfs-yc2F4O/ouyangxiao/xemb-new/experimental/bsp-robocasa-microwave/data/turn_off_microwave_human_im.hdf5",
+  "n_demos": 54,
+  "env_args": {
+    "env_name": "TurnOffMicrowave",
+    "env_version": "1.4.1",
+    "type": 1,
+    "env_kwargs": {
+      "robots": "PandaMobile",
+      "controller_configs": {
+        "type": "OSC_POSE",
+        "input_max": 1,
+        "input_min": -1,
+        "output_max": [
+          0.05,
+          0.05,
+          0.05,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "output_min": [
+          -0.05,
+          -0.05,
+          -0.05,
+          -0.5,
+          -0.5,
+          -0.5
+        ],
+        "kp": 150,
+        "damping_ratio": 1,
+        "impedance_mode": "fixed",
+        "kp_limits": [
+          0,
+          300
+        ],
+        "damping_ratio_limits": [
+          0,
+          10
+        ],
+        "position_limits": null,
+        "orientation_limits": null,
+        "uncouple_pos_ori": true,
+        "control_delta": true,
+        "interpolation": null,
+        "ramp_ratio": 0.2
+      },
+      "layout_ids": -1,
+      "style_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        11
+      ],
+      "translucent_robot": false,
+      "obj_instance_split": "A",
+      "generative_textures": "100p",
+      "randomize_cameras": true,
+      "reward_shaping": false,
+      "camera_names": [
+        "robot0_agentview_left",
+        "robot0_agentview_right",
+        "robot0_eye_in_hand"
+      ],
+      "camera_heights": 128,
+      "camera_widths": 128,
+      "has_renderer": false,
+      "has_offscreen_renderer": true,
+      "ignore_done": true,
+      "use_object_obs": true,
+      "use_camera_obs": true,
+      "camera_depths": false
+    }
+  },
+  "action_dims": [
+    12
+  ],
+  "observations": {
+    "object": {
+      "shape": [
+        12,
+        14
+      ],
+      "dtype": "float64"
+    },
+    "robot0_agentview_left_image": {
+      "shape": [
+        12,
+        128,
+        128,
+        3
+      ],
+      "dtype": "uint8"
+    },
+    "robot0_agentview_right_image": {
+      "shape": [
+        12,
+        128,
+        128,
+        3
+      ],
+      "dtype": "uint8"
+    },
+    "robot0_base_pos": {
+      "shape": [
+        12,
+        3
+      ],
+      "dtype": "float64"
+    },
+    "robot0_base_quat": {
+      "shape": [
+        12,
+        4
+      ],
+      "dtype": "float32"
+    },
+    "robot0_base_to_eef_pos": {
+      "shape": [
+        12,
+        3
+      ],
+      "dtype": "float64"
+    },
+    "robot0_base_to_eef_quat": {
+      "shape": [
+        12,
+        4
+      ],
+      "dtype": "float32"
+    },
+    "robot0_eef_pos": {
+      "shape": [
+        12,
+        3
+      ],
+      "dtype": "float64"
+    },
+    "robot0_eef_quat": {
+      "shape": [
+        12,
+        4
+      ],
+      "dtype": "float64"
+    },
+    "robot0_eye_in_hand_image": {
+      "shape": [
+        12,
+        128,
+        128,
+        3
+      ],
+      "dtype": "uint8"
+    },
+    "robot0_gripper_qpos": {
+      "shape": [
+        12,
+        2
+      ],
+      "dtype": "float64"
+    },
+    "robot0_gripper_qvel": {
+      "shape": [
+        12,
+        2
+      ],
+      "dtype": "float64"
+    },
+    "robot0_joint_pos": {
+      "shape": [
+        12,
+        7
+      ],
+      "dtype": "float64"
+    },
+    "robot0_joint_pos_cos": {
+      "shape": [
+        12,
+        7
+      ],
+      "dtype": "float64"
+    },
+    "robot0_joint_pos_sin": {
+      "shape": [
+        12,
+        7
+      ],
+      "dtype": "float64"
+    },
+    "robot0_joint_vel": {
+      "shape": [
+        12,
+        7
+      ],
+      "dtype": "float64"
+    }
+  },
+  "demonstrations": [
+    {
+      "demo": "demo_1",
+      "length": 12,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_2",
+      "length": 238,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_3",
+      "length": 225,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_4",
+      "length": 252,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_5",
+      "length": 252,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_6",
+      "length": 287,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_7",
+      "length": 209,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_8",
+      "length": 244,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_9",
+      "length": 239,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_10",
+      "length": 212,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_11",
+      "length": 219,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_12",
+      "length": 217,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_13",
+      "length": 209,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_14",
+      "length": 179,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_15",
+      "length": 232,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_16",
+      "length": 210,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_17",
+      "length": 218,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_18",
+      "length": 247,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_19",
+      "length": 225,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_20",
+      "length": 182,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_21",
+      "length": 198,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_22",
+      "length": 247,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_23",
+      "length": 203,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_24",
+      "length": 318,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_25",
+      "length": 280,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_26",
+      "length": 205,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_27",
+      "length": 241,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_28",
+      "length": 291,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_29",
+      "length": 236,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_30",
+      "length": 180,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_31",
+      "length": 223,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_32",
+      "length": 233,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_33",
+      "length": 237,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_34",
+      "length": 231,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_35",
+      "length": 225,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_36",
+      "length": 183,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_37",
+      "length": 176,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_38",
+      "length": 12,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_39",
+      "length": 264,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_40",
+      "length": 235,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_41",
+      "length": 224,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_42",
+      "length": 221,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_43",
+      "length": 218,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_44",
+      "length": 234,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_45",
+      "length": 223,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_46",
+      "length": 162,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_47",
+      "length": 291,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_48",
+      "length": 174,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_49",
+      "length": 236,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_50",
+      "length": 231,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_51",
+      "length": 256,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_52",
+      "length": 181,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_53",
+      "length": 229,
+      "action_dim": 12
+    },
+    {
+      "demo": "demo_54",
+      "length": 221,
+      "action_dim": 12
+    }
+  ]
+}

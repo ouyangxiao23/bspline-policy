@@ -1,0 +1,21 @@
+{
+  "model": "dense",
+  "status": "passed",
+  "loss": 1.1918094158172607,
+  "samples": 10233,
+  "validation_samples": 1216,
+  "parameters": 102754896,
+  "peak_allocated_gib": 3.0366907119750977,
+  "peak_reserved_gib": 3.8515625,
+  "seconds": 1.4962642192840576,
+  "action_shape": [
+    64,
+    16,
+    12
+  ],
+  "prediction_shape": [
+    64,
+    16,
+    12
+  ]
+}
