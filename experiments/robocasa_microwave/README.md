@@ -54,3 +54,7 @@ All 50 paired initial state hashes match. Seed 100021 initially satisfied succes
 ## Final checkpoint evaluation
 
 Both training processes completed 601 epochs successfully (zero-based checkpoint epoch 600). Place stable independent final copies at `outputs/rollout_final/checkpoints/{dense,bsp}.ckpt` and launch `scripts/launch_rollout_final.py`. It reuses the 50 eligible interim seeds, runs four shards per model, and verifies both policy pairing and the interim/final initial-state hashes before final summary. Final results are stored separately from epoch 380.
+
+## Final measured result
+
+Both policies completed the same 50 valid paired tests at checkpoint epoch 600 (601 training epochs): dense DP 36/50 (72%), BSP-DP 10/50 (20%). At epoch 380 they achieved 31/50 (62%) and 16/50 (32%), respectively. No runtime failures occurred; initial-state hashes match across models and checkpoints. Results and protocol limits are in `reports/rollout_final_comparison.json`. The current protocol does not reproduce the paper's BSP benefit.

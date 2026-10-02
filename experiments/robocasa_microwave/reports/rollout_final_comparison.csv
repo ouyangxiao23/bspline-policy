@@ -1,0 +1,3 @@
+model,epoch,n_test,successes,success_rate,paper_success_rate,wilson_95_low,wilson_95_high
+dense,600,50,36,0.72,0.77,0.5833487630404344,0.8252582933408878
+bsp,600,50,10,0.2,0.89,0.1124375001577611,0.3303710593222542
