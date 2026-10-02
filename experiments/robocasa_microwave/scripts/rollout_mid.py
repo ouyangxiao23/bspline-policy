@@ -8,15 +8,17 @@ from omegaconf import OmegaConf
 from scipy.interpolate import BSpline
 import robosuite,robocasa,mujoco
 assert mujoco.__version__=="3.1.1",mujoco.__version__
-p=argparse.ArgumentParser();p.add_argument('--output-dir',type=Path);p.add_argument('--model',choices=['dense','bsp'],required=True);p.add_argument('--n-test',type=int,default=50);p.add_argument('--start-seed',type=int,default=100000);p.add_argument('--max-steps',type=int,default=500);p.add_argument('--video-count',type=int,default=2);p.add_argument('--smoke',action='store_true');p.add_argument('--replay-demo',type=int);args=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument('--checkpoint',type=Path);p.add_argument('--seeds');p.add_argument('--output-dir',type=Path);p.add_argument('--model',choices=['dense','bsp'],required=True);p.add_argument('--n-test',type=int,default=50);p.add_argument('--start-seed',type=int,default=100000);p.add_argument('--max-steps',type=int,default=500);p.add_argument('--video-count',type=int,default=2);p.add_argument('--smoke',action='store_true');p.add_argument('--replay-demo',type=int);args=p.parse_args()
 OUT=args.output_dir or ROOT/'outputs/rollout_mid'/args.model;OUT.mkdir(parents=True,exist_ok=True)
 meta=json.loads((ROOT/'reports/dataset_inspection.json').read_text())['env_args']
 kwargs=meta['env_kwargs'].copy();kwargs.update(has_renderer=False,has_offscreen_renderer=True,use_camera_obs=True,control_freq=20)
 OmegaConf.register_new_resolver('eval',eval,replace=True)
-payload=torch.load(ROOT/f'outputs/rollout_mid/checkpoints/{args.model}.ckpt',map_location='cpu',weights_only=False)
+payload=torch.load(args.checkpoint or ROOT/f'outputs/rollout_mid/checkpoints/{args.model}.ckpt',map_location='cpu',weights_only=False)
 cfg=payload['cfg'];OmegaConf.resolve(cfg)
 policy=hydra.utils.instantiate(cfg.policy);policy.load_state_dict(payload['state_dicts']['ema_model' if cfg.training.use_ema else 'model']);policy.cuda().eval()
 epoch=dill.loads(payload['pickles']['epoch']);del payload
+assert ('BSpline' in cfg.policy._target_)==(args.model=='bsp'), 'checkpoint policy type mismatch'
+print('CHECKPOINT',args.model,'epoch',epoch,'training_epochs',cfg.training.num_epochs,'EMA',cfg.training.use_ema,flush=True)
 keys=cfg.shape_meta.obs
 # Exact same knot safety rule used by the upstream deployment entrypoint.
 def safer_knots(knots):
@@ -45,8 +47,9 @@ def decode(params):
  assert np.isfinite(actions).all(),'nonfinite spline actions'
  return actions
 records=[]
-for i in range(1 if args.smoke else args.n_test):
- seed=args.start_seed+i;random.seed(seed);np.random.seed(seed);torch.manual_seed(12345+seed-100000);torch.cuda.manual_seed_all(12345+seed-100000)
+test_seeds=[int(x) for x in args.seeds.split(',')] if args.seeds else list(range(args.start_seed,args.start_seed+args.n_test))
+for i in range(1 if args.smoke else len(test_seeds)):
+ seed=test_seeds[i];random.seed(seed);np.random.seed(seed);torch.manual_seed(12345+seed-100000);torch.cuda.manual_seed_all(12345+seed-100000)
  path=OUT/f'episode_{seed}.json'
  if path.exists() and not args.smoke:records.append(json.loads(path.read_text()));continue
  started=time.time();env=None;writer=None

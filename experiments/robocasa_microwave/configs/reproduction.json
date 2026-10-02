@@ -126,7 +126,9 @@
     "rollout": "separate from training; simulator not yet verified",
     "upstream_core_modified": false,
     "batch8_archive": "/mnt/pfs/pfs-yc2F4O/ouyangxiao/xemb-new/experimental/bsp-robocasa-microwave/outputs/archive_batch8_1790934392",
-    "restart": "fresh initialization"
+    "restart": "fresh initialization",
+    "completed": true,
+    "final_checkpoint_epoch": 600
   },
   "node_dependencies": {
     "directory": "/tmp/bsp-microwave-deps",

@@ -50,3 +50,7 @@ Spline knot repair follows the upstream deployment `safer_knots` rule; sampling 
 | BSP-DP | 16 / 50 | 32% | 89% |
 
 All 50 paired initial state hashes match. Seed 100021 initially satisfied success before any policy action; both models exclude it and use seed 100050 instead. No runtime failures remain. Detailed episodes, Wilson confidence intervals and protocol limits are in `reports/rollout_interim_comparison.json`. This intermediate, single-seed, 20 Hz result does not reproduce the paper's reported BSP benefit or its stated 100 Hz sampling protocol. Final training is still in progress.
+
+## Final checkpoint evaluation
+
+Both training processes completed 601 epochs successfully (zero-based checkpoint epoch 600). Place stable independent final copies at `outputs/rollout_final/checkpoints/{dense,bsp}.ckpt` and launch `scripts/launch_rollout_final.py`. It reuses the 50 eligible interim seeds, runs four shards per model, and verifies both policy pairing and the interim/final initial-state hashes before final summary. Final results are stored separately from epoch 380.
