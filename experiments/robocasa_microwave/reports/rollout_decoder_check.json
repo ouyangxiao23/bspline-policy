@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "interior_max_error": 0.0,
+  "sampling": "integer frame times, half-open domain; no inclusive padded endpoint",
+  "demos_checked": [
+    0,
+    1,
+    2
+  ]
+}

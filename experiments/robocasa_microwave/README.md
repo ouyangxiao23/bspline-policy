@@ -33,3 +33,11 @@ The launcher checks both models before training on GPUs 0 and 2. `MICROWAVE_DATA
 Closed-loop rollout has not yet been validated. The dataset records robosuite 1.4.1 and an old RoboCasa protocol; the candidate RoboCasa 1.0.1 environment is not verified as compatible. Spline boundary decoding and control frequency must also be checked before reporting success rates. `scripts/audit_sources.py` expects the separately pinned RoboCasa candidate checkout at `third_party/robocasa`.
 
 Current training settings are in `actual_training` in reproduction.json; proposed settings and pending items describe earlier planning, not the active run.
+
+## Interim rollout
+
+The old mobile robot environment is pinned separately by `scripts/prepare_eval_sources.py`. Install MuJoCo 3.1.1 into an isolated `MICROWAVE_EVAL_DEPS` target (default `/tmp/bsp-microwave-eval-deps`); keep the training environment unchanged. Run `scripts/prepare_eval_assets.py` to download the task assets (Objaverse only, matching the task default).
+
+Place stable, independent checkpoint copies at `outputs/rollout_mid/checkpoints/{dense,bsp}.ckpt`; do not evaluate files while saving. `scripts/launch_rollout_mid.py` checks paired reset state hashes, both policy forward passes and successful replay of validation demo 4, then evaluates 50 seeds per policy across four shards on GPUs 0/2. It uses EMA, 20 Hz control, 500 steps and an execution cap of 8 actions.
+
+Spline knot repair follows the upstream deployment `safer_knots` rule; sampling uses frame-index times with the current history frame at time 1, clamped to the valid half-open domain to avoid padded endpoint artifacts. This is an explicit simulation adapter, not a verified paper evaluation protocol. Video is recorded for the first two episodes.
