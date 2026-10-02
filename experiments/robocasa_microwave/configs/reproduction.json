@@ -74,12 +74,9 @@
     "first_stage": "one GPU smoke test; then independent seeds/ablations"
   },
   "pending": [
-    "Choose and validate the dataset and matching RoboCasa/robosuite/MuJoCo versions.",
-    "Download required scene/fixture assets and verify environment reset/step/render.",
-    "Implement Microwave dataset and runner adapters; published BSP task configs target real data.",
-    "Resolve and test spline local segment boundary/decoding mismatch before rollout.",
-    "Verify action dimensions, normalization, knot units, sampling frequency and execution span.",
-    "Measure single-GPU FP16 peak VRAM and throughput before long training."
+    "Verify paper dataset and task-specific training/evaluation protocol.",
+    "Resolve paper 100 Hz spline sampling versus the 20 Hz dataset environment before claiming numeric reproduction.",
+    "Evaluate validation-selected and final checkpoints to assess convergence."
   ],
   "selected_dataset": {
     "path": "/mnt/pfs/pfs-yc2F4O/ouyangxiao/xemb-new/experimental/bsp-robocasa-microwave/data/turn_off_microwave_human_im_indexed.hdf5",
@@ -137,5 +134,18 @@
     "imagecodecs": "2024.12.30",
     "pytorch3d": "v0.7.7 pure Python transforms/common only",
     "shared_environment_modified": false
+  },
+  "evaluation_environment": {
+    "robocasa_commit": "1370b9e0f747d84fb21ed29bacefb1654865301b",
+    "robosuite_commit": "2f9bfdce36471db08e31e3c6d918df40f0698ef2",
+    "mujoco": "3.1.1",
+    "dependency_target": "/tmp/bsp-microwave-eval-deps",
+    "control_frequency_hz": 20,
+    "validated": [
+      "paired reset state hashes",
+      "dense and spline inference",
+      "successful action replay of validation demo 4"
+    ],
+    "paper_protocol_verified": false
   }
 }

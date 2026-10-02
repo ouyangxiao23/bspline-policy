@@ -43,3 +43,20 @@ while True:
  done=all(p.poll() is not None for p in jobs.values());save('finished' if done else 'rollout',jobs=progress)
  if done:break
  time.sleep(15)
+
+# Eligibility is determined before policy execution, with matching exclusions.
+for replacement in range(20):
+ all_records={}
+ for model in ['dense','bsp']:
+  all_records[model]=[json.loads(p.read_text()) for shard in (ROOT/f'outputs/rollout_mid/{model}').glob('shard_*') for p in shard.glob('episode_*.json')]
+  errors=[x for x in all_records[model] if x['status']!='completed' and 'reset already satisfies success' not in x.get('error','')]
+  assert not errors,('unresolved rollout errors',model,errors)
+ counts={m:sum(x['status']=='completed' for x in rows) for m,rows in all_records.items()}
+ assert counts['dense']==counts['bsp'],counts
+ if counts['dense']==50:break
+ seed=100050+replacement;shard=4+replacement
+ save('replacement_initial_state',seed=seed)
+ children=[launch(m,['--n-test','1','--start-seed',str(seed),'--output-dir',str(ROOT/f'outputs/rollout_mid/{m}/shard_{shard}'),'--video-count','0'],f'rollout_{m}_replacement_{seed}.log') for m in ['dense','bsp']]
+ assert all(p.wait()==0 for p in children)
+else:raise RuntimeError('Could not obtain 50 valid initial states')
+subprocess.run([sys.executable,str(ROOT/'scripts/summarize_rollout.py')],check=True)

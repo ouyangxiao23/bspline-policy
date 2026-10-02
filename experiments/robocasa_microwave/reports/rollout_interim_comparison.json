@@ -1,0 +1,1839 @@
+{
+  "status": "complete",
+  "time": 1790942957.285472,
+  "task": "TurnOffMicrowave",
+  "paper": {
+    "url": "https://arxiv.org/html/2607.09648v1",
+    "table": "2(a)",
+    "dense_dp_success_rate": 0.77,
+    "bsp_dp_success_rate": 0.89
+  },
+  "protocol": {
+    "checkpoint_epoch": 380,
+    "EMA": true,
+    "n_test_each": 50,
+    "control_frequency_hz": 20,
+    "max_steps": 500,
+    "action_execution_cap": 8,
+    "paired_initial_states_verified": true,
+    "seeds": [
+      100000,
+      100001,
+      100002,
+      100003,
+      100004,
+      100005,
+      100006,
+      100007,
+      100008,
+      100009,
+      100010,
+      100011,
+      100012,
+      100013,
+      100014,
+      100015,
+      100016,
+      100017,
+      100018,
+      100019,
+      100020,
+      100022,
+      100023,
+      100024,
+      100025,
+      100026,
+      100027,
+      100028,
+      100029,
+      100030,
+      100031,
+      100032,
+      100033,
+      100034,
+      100035,
+      100036,
+      100037,
+      100038,
+      100039,
+      100040,
+      100041,
+      100042,
+      100043,
+      100044,
+      100045,
+      100046,
+      100047,
+      100048,
+      100049,
+      100050
+    ],
+    "excluded_initially_successful_seeds": [
+      100021
+    ],
+    "source_commits": {
+      "robocasa": "1370b9e0f747d84fb21ed29bacefb1654865301b",
+      "robosuite": "2f9bfdce36471db08e31e3c6d918df40f0698ef2"
+    },
+    "mujoco": "3.1.1",
+    "paper_protocol_verified": false,
+    "comparison_limits": [
+      "Paper specifies 100 Hz spline sampling; this dataset/environment uses 20 Hz control.",
+      "Data and environment versions, evaluation count and task-specific checkpoint selection in the paper are not established.",
+      "This is one intermediate epoch from one training seed, not a final convergence result."
+    ]
+  },
+  "results": {
+    "dense": {
+      "model": "dense",
+      "epoch": 380,
+      "n_test": 50,
+      "n_invalid_initial_states": 1,
+      "n_failed_runtime": 0,
+      "successes": 31,
+      "success_rate": 0.62,
+      "success_rate_wilson_95": [
+        0.4815044693099298,
+        0.7413721068980641
+      ],
+      "episodes": [
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100000,
+          "policy_seed": 12345,
+          "success": true,
+          "steps": 265,
+          "seconds": 52.56531500816345,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "2113f57d3986ad57cae1de80be5d414f0802fefaad827c71662e56141bc92302",
+          "scene": {
+            "layout_id": 9,
+            "style_id": 7
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100001,
+          "policy_seed": 12346,
+          "success": true,
+          "steps": 258,
+          "seconds": 40.84489703178406,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "b09e20ad0b2fcc7cbcaa26524f51a5c4b7b2090c6598723aabe8c42f0ce9ed34",
+          "scene": {
+            "layout_id": 8,
+            "style_id": 6
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100002,
+          "policy_seed": 12347,
+          "success": false,
+          "steps": 500,
+          "seconds": 68.40731763839722,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "f1f25936f35d23f2532ea4ea7bd30c0f36b5704114070b5b57016032dfce6f7c",
+          "scene": {
+            "layout_id": 6,
+            "style_id": 6
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100003,
+          "policy_seed": 12348,
+          "success": true,
+          "steps": 427,
+          "seconds": 83.19325351715088,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "1df6550f77786229c2c15c8e6ba1950708ed23e2b96239c5247eed4d81881d4c",
+          "scene": {
+            "layout_id": 8,
+            "style_id": 11
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100004,
+          "policy_seed": 12349,
+          "success": false,
+          "steps": 500,
+          "seconds": 70.34410738945007,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "c58276e1693a0e5fc412ce5c7969def96ed61e899606c5f4ec24c717f7cbc88d",
+          "scene": {
+            "layout_id": 8,
+            "style_id": 2
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100005,
+          "policy_seed": 12350,
+          "success": false,
+          "steps": 500,
+          "seconds": 58.0960476398468,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "d3f24017057065fc51acfbdded2e7cbbc277efb04b0f5d463c2aa97dbf55decc",
+          "scene": {
+            "layout_id": 7,
+            "style_id": 6
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100006,
+          "policy_seed": 12351,
+          "success": true,
+          "steps": 144,
+          "seconds": 34.60611414909363,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "58235be59972ebce2a013cc11cdf7d679e45f91d519e7405fb2c5611b2f146d4",
+          "scene": {
+            "layout_id": 9,
+            "style_id": 4
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100007,
+          "policy_seed": 12352,
+          "success": true,
+          "steps": 227,
+          "seconds": 33.37467837333679,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "a6d37acd655abdea396ee26807099879b55e8f33296e590ae3b884bb83f0ef98",
+          "scene": {
+            "layout_id": 2,
+            "style_id": 2
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100008,
+          "policy_seed": 12353,
+          "success": false,
+          "steps": 500,
+          "seconds": 59.2761914730072,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "65e8bdb7fe769ef67be0da6938d1442d5984a95f34aa24b5c00e358292c7470e",
+          "scene": {
+            "layout_id": 3,
+            "style_id": 0
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100009,
+          "policy_seed": 12354,
+          "success": true,
+          "steps": 431,
+          "seconds": 62.62510132789612,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "b1e05c2aea2d0ff4cfb58bd20d8c169232354bb00b532c18849c5c00c681169d",
+          "scene": {
+            "layout_id": 6,
+            "style_id": 5
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100010,
+          "policy_seed": 12355,
+          "success": true,
+          "steps": 225,
+          "seconds": 38.71532940864563,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "6113d29ba021716991747900b32c58bd323e4bac8379234d3c20df765a35275e",
+          "scene": {
+            "layout_id": 7,
+            "style_id": 2
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100011,
+          "policy_seed": 12356,
+          "success": false,
+          "steps": 500,
+          "seconds": 55.49352145195007,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "8e74a4ce3b1c31f9025a363d55787413095df597c9151019081ed8edd409ca2a",
+          "scene": {
+            "layout_id": 9,
+            "style_id": 11
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100012,
+          "policy_seed": 12357,
+          "success": true,
+          "steps": 226,
+          "seconds": 35.01020407676697,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "3e05066f3843bd3406d21f31104130766c16dc3a9bf98e6d63f4358618ce0151",
+          "scene": {
+            "layout_id": 5,
+            "style_id": 8
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100013,
+          "policy_seed": 12358,
+          "success": true,
+          "steps": 197,
+          "seconds": 28.279916286468506,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "cffc81ad15ac85e7b8ffd599fd6a1a697106f8845b809ec9bb5843686f996bb0",
+          "scene": {
+            "layout_id": 0,
+            "style_id": 1
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100014,
+          "policy_seed": 12359,
+          "success": true,
+          "steps": 468,
+          "seconds": 52.48979473114014,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "8f2422f47e91ed70a34afc5a83345395bd8818c83fda6ab4e6577cf7dda931eb",
+          "scene": {
+            "layout_id": 2,
+            "style_id": 2
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100015,
+          "policy_seed": 12360,
+          "success": true,
+          "steps": 211,
+          "seconds": 36.78030443191528,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "c6ac4e0e2572c0c2b10c644bf0e69863835d89c46082b7c30fac0dde8dfef328",
+          "scene": {
+            "layout_id": 5,
+            "style_id": 11
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100016,
+          "policy_seed": 12361,
+          "success": true,
+          "steps": 236,
+          "seconds": 39.79010343551636,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "b0ab6396c3a886df209796b6762d3bc32f97c4ce137a84e18f60104ab050c56e",
+          "scene": {
+            "layout_id": 7,
+            "style_id": 3
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100017,
+          "policy_seed": 12362,
+          "success": true,
+          "steps": 220,
+          "seconds": 39.02751660346985,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "0401a1a4d178cad519f93c7ea121b9f3dbc1640d5a3d96bea7e07e2a6b5f5a84",
+          "scene": {
+            "layout_id": 7,
+            "style_id": 2
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100018,
+          "policy_seed": 12363,
+          "success": false,
+          "steps": 500,
+          "seconds": 62.83095860481262,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "ea214c23d34a0c95bb4094279268ba49753f6e092ec093f099a3b442a618bfbf",
+          "scene": {
+            "layout_id": 7,
+            "style_id": 1
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100019,
+          "policy_seed": 12364,
+          "success": false,
+          "steps": 500,
+          "seconds": 94.64438939094543,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "6a2234e6caa3f42a535665982406827a378f78df7367498d66bb1d0b12513a22",
+          "scene": {
+            "layout_id": 9,
+            "style_id": 1
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100020,
+          "policy_seed": 12365,
+          "success": true,
+          "steps": 181,
+          "seconds": 34.627413749694824,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "fb863bacf97697acc0d7e3332605720e24950cb655c2dba1a87f38be02fc8632",
+          "scene": {
+            "layout_id": 4,
+            "style_id": 2
+          }
+        },
+        {
+          "status": "failed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100021,
+          "error": "AssertionError('reset already satisfies success; invalid evaluation initialization')",
+          "seconds": 21.77268123626709
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100022,
+          "policy_seed": 12367,
+          "success": true,
+          "steps": 211,
+          "seconds": 38.95888352394104,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "9ef0a5beaba1286aeb7d43a2406468605515aa8cbef47dc9d409f1097c41c793",
+          "scene": {
+            "layout_id": 2,
+            "style_id": 2
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100023,
+          "policy_seed": 12368,
+          "success": false,
+          "steps": 500,
+          "seconds": 51.02243375778198,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "e1c607fbe8cafbdde3cc8ea10abd14c168ffbca6f74d2d58f8ac3d416dbc438a",
+          "scene": {
+            "layout_id": 5,
+            "style_id": 8
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100024,
+          "policy_seed": 12369,
+          "success": false,
+          "steps": 500,
+          "seconds": 64.34253764152527,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "184d258dda0243fd95e32e897382a1c789f3c0a381793b814e8d86c3fdd450ff",
+          "scene": {
+            "layout_id": 9,
+            "style_id": 5
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100025,
+          "policy_seed": 12370,
+          "success": true,
+          "steps": 248,
+          "seconds": 43.08266639709473,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "e89156e20f8a80854d1f11710cce016f1fc3c7193c061b8604206a6e5c436597",
+          "scene": {
+            "layout_id": 1,
+            "style_id": 6
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100026,
+          "policy_seed": 12371,
+          "success": false,
+          "steps": 500,
+          "seconds": 52.796141147613525,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "2f7b4b9f69f8faf75eb9d090a438a120884bdee685694c04f9b46abf77049234",
+          "scene": {
+            "layout_id": 1,
+            "style_id": 1
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100027,
+          "policy_seed": 12372,
+          "success": true,
+          "steps": 288,
+          "seconds": 45.97180390357971,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "08e3714b72f20c6b558245f356c50bef4811eab86d19229b063bfcd2da0cfb7e",
+          "scene": {
+            "layout_id": 6,
+            "style_id": 5
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100028,
+          "policy_seed": 12373,
+          "success": false,
+          "steps": 500,
+          "seconds": 56.34306716918945,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "fd0660d0f441e07dc4dc39c04deadafc35dddf7222b328cd9a6e55e4008af2dc",
+          "scene": {
+            "layout_id": 1,
+            "style_id": 11
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100029,
+          "policy_seed": 12374,
+          "success": true,
+          "steps": 163,
+          "seconds": 46.69909596443176,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "acd050ca50f2de7b46e2d8d7222718bb4b6c98498b32d2ef4f29cef39b3bddab",
+          "scene": {
+            "layout_id": 8,
+            "style_id": 11
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100030,
+          "policy_seed": 12375,
+          "success": true,
+          "steps": 212,
+          "seconds": 38.0192494392395,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "0cf375060f5e5f074e797b5c04fa5d0c66c5250be882bc1c2835226ebc8bf051",
+          "scene": {
+            "layout_id": 8,
+            "style_id": 2
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100031,
+          "policy_seed": 12376,
+          "success": true,
+          "steps": 373,
+          "seconds": 41.49541759490967,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "fcf9b53063874e7c2e845b773d3409becdf882902dfd36f872f261ba12556160",
+          "scene": {
+            "layout_id": 0,
+            "style_id": 2
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100032,
+          "policy_seed": 12377,
+          "success": false,
+          "steps": 500,
+          "seconds": 60.84687519073486,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "5a122fd62622d717b70753e1c3ae4a991d5f52e2c09c0005ed60dbb1698a85a0",
+          "scene": {
+            "layout_id": 9,
+            "style_id": 8
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100033,
+          "policy_seed": 12378,
+          "success": true,
+          "steps": 235,
+          "seconds": 38.34037804603577,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "0771ba459408b7649fdf5a924621f3f62d9ca05762ed1dc0d489b4035fc7ad9a",
+          "scene": {
+            "layout_id": 7,
+            "style_id": 8
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100034,
+          "policy_seed": 12379,
+          "success": true,
+          "steps": 184,
+          "seconds": 33.705979347229004,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "2c32c04971fc052b45a63d4906bbd18f452de12c9440be8ae776256345f02251",
+          "scene": {
+            "layout_id": 2,
+            "style_id": 2
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100035,
+          "policy_seed": 12380,
+          "success": true,
+          "steps": 209,
+          "seconds": 32.86549615859985,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "f43b166ec66edf4c118f56cf78e364d8773ec62927c61458bfd1d4e83ad3d405",
+          "scene": {
+            "layout_id": 1,
+            "style_id": 4
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100036,
+          "policy_seed": 12381,
+          "success": false,
+          "steps": 500,
+          "seconds": 54.537341594696045,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "c5adc8389aa9ed4d3745383490d5ee7be45378521807137d8a6908efc0db8407",
+          "scene": {
+            "layout_id": 3,
+            "style_id": 2
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100037,
+          "policy_seed": 12382,
+          "success": false,
+          "steps": 500,
+          "seconds": 57.74587821960449,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "88c36ab8d308cb350777cee040ca5ca9b8c9b8a9577ba4f1824141c327a37dd4",
+          "scene": {
+            "layout_id": 3,
+            "style_id": 6
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100038,
+          "policy_seed": 12383,
+          "success": false,
+          "steps": 500,
+          "seconds": 55.09897255897522,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "ee2a1e0b25847454a5269906ab2fd9c6a2c45741c8b8366951fd4535df43914c",
+          "scene": {
+            "layout_id": 2,
+            "style_id": 11
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100039,
+          "policy_seed": 12384,
+          "success": true,
+          "steps": 212,
+          "seconds": 30.68081831932068,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "450b6cd64edf129e65fe048f6fc63b55959531687da69fdd8d58a71324be1ca2",
+          "scene": {
+            "layout_id": 2,
+            "style_id": 8
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100040,
+          "policy_seed": 12385,
+          "success": true,
+          "steps": 389,
+          "seconds": 47.63254237174988,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "957f9cb61877aebf11d041f81e83745500a3d54282b08798cb9e1963ab5f43b0",
+          "scene": {
+            "layout_id": 3,
+            "style_id": 2
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100041,
+          "policy_seed": 12386,
+          "success": true,
+          "steps": 258,
+          "seconds": 39.77285027503967,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "aae6afb713b980d1dbb4137a02a72652c69c98bb45c21dc1fc29ac4f738d8ff4",
+          "scene": {
+            "layout_id": 7,
+            "style_id": 11
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100042,
+          "policy_seed": 12387,
+          "success": false,
+          "steps": 500,
+          "seconds": 84.53550243377686,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "daec57b7c152e001e53549ead9ade2a76373a0f57c6a5cf3a612924374479009",
+          "scene": {
+            "layout_id": 5,
+            "style_id": 3
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100043,
+          "policy_seed": 12388,
+          "success": true,
+          "steps": 183,
+          "seconds": 31.322925329208374,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "bc66721b8d0d9cd3e0fd50bf04e63edbff80e36c9d7bf2fd1f9fd3a52ec604db",
+          "scene": {
+            "layout_id": 2,
+            "style_id": 7
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100044,
+          "policy_seed": 12389,
+          "success": true,
+          "steps": 220,
+          "seconds": 37.54315185546875,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "65cba073ba7328a6c9961061cb7655db2e5b8756480bd4db970d9149c20100a8",
+          "scene": {
+            "layout_id": 7,
+            "style_id": 8
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100045,
+          "policy_seed": 12390,
+          "success": true,
+          "steps": 235,
+          "seconds": 33.046645402908325,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "3ce68b9b70496b0c1b2128034e8d2382b9c15478294addc5394f1bd3c0b51324",
+          "scene": {
+            "layout_id": 0,
+            "style_id": 8
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100046,
+          "policy_seed": 12391,
+          "success": true,
+          "steps": 227,
+          "seconds": 34.480939626693726,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "8baa4471705bbb5f905b5bc2c023393ec09da3c7bf6c22fc4ad735b0849640bf",
+          "scene": {
+            "layout_id": 7,
+            "style_id": 1
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100047,
+          "policy_seed": 12392,
+          "success": false,
+          "steps": 500,
+          "seconds": 42.27358102798462,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "7bc3504e08ddff9b3834e730fa617673537cd2611230ecdca941ae82bc5086f1",
+          "scene": {
+            "layout_id": 0,
+            "style_id": 8
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100048,
+          "policy_seed": 12393,
+          "success": false,
+          "steps": 500,
+          "seconds": 56.043702602386475,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "51592acb707a971fca5661426f01079f12cd17477889f2516fc6123490ec471c",
+          "scene": {
+            "layout_id": 3,
+            "style_id": 7
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100049,
+          "policy_seed": 12394,
+          "success": false,
+          "steps": 500,
+          "seconds": 66.32000088691711,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "97f8f1019141fc6f425d0afcea9e4db03bd00c6538e90da77f251bdc3950468d",
+          "scene": {
+            "layout_id": 6,
+            "style_id": 7
+          }
+        },
+        {
+          "status": "completed",
+          "model": "dense",
+          "epoch": 380,
+          "seed": 100050,
+          "policy_seed": 12395,
+          "success": true,
+          "steps": 224,
+          "seconds": 37.236327171325684,
+          "clipped_steps": 0,
+          "max_action_magnitude": 1.0,
+          "initial_state_sha256": "908a53301415d96f636fb08d92fd6637fe2773bc5f4c9d6f3a4742d99463931c",
+          "scene": {
+            "layout_id": 7,
+            "style_id": 4
+          }
+        }
+      ]
+    },
+    "bsp": {
+      "model": "bsp",
+      "epoch": 380,
+      "n_test": 50,
+      "n_invalid_initial_states": 1,
+      "n_failed_runtime": 0,
+      "successes": 16,
+      "success_rate": 0.32,
+      "success_rate_wilson_95": [
+        0.20758216260656845,
+        0.45810297308144077
+      ],
+      "episodes": [
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100000,
+          "policy_seed": 12345,
+          "success": false,
+          "steps": 500,
+          "seconds": 68.62020754814148,
+          "clipped_steps": 384,
+          "max_action_magnitude": 1.5014119148254395,
+          "initial_state_sha256": "2113f57d3986ad57cae1de80be5d414f0802fefaad827c71662e56141bc92302",
+          "scene": {
+            "layout_id": 9,
+            "style_id": 7
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100001,
+          "policy_seed": 12346,
+          "success": true,
+          "steps": 211,
+          "seconds": 35.83326554298401,
+          "clipped_steps": 125,
+          "max_action_magnitude": 1.012022614479065,
+          "initial_state_sha256": "b09e20ad0b2fcc7cbcaa26524f51a5c4b7b2090c6598723aabe8c42f0ce9ed34",
+          "scene": {
+            "layout_id": 8,
+            "style_id": 6
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100002,
+          "policy_seed": 12347,
+          "success": false,
+          "steps": 500,
+          "seconds": 68.43513536453247,
+          "clipped_steps": 244,
+          "max_action_magnitude": 1.0775623321533203,
+          "initial_state_sha256": "f1f25936f35d23f2532ea4ea7bd30c0f36b5704114070b5b57016032dfce6f7c",
+          "scene": {
+            "layout_id": 6,
+            "style_id": 6
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100003,
+          "policy_seed": 12348,
+          "success": true,
+          "steps": 229,
+          "seconds": 57.24772787094116,
+          "clipped_steps": 152,
+          "max_action_magnitude": 1.0042628049850464,
+          "initial_state_sha256": "1df6550f77786229c2c15c8e6ba1950708ed23e2b96239c5247eed4d81881d4c",
+          "scene": {
+            "layout_id": 8,
+            "style_id": 11
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100004,
+          "policy_seed": 12349,
+          "success": false,
+          "steps": 500,
+          "seconds": 65.6657497882843,
+          "clipped_steps": 337,
+          "max_action_magnitude": 1.1432353258132935,
+          "initial_state_sha256": "c58276e1693a0e5fc412ce5c7969def96ed61e899606c5f4ec24c717f7cbc88d",
+          "scene": {
+            "layout_id": 8,
+            "style_id": 2
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100005,
+          "policy_seed": 12350,
+          "success": true,
+          "steps": 243,
+          "seconds": 40.93186664581299,
+          "clipped_steps": 171,
+          "max_action_magnitude": 1.008080005645752,
+          "initial_state_sha256": "d3f24017057065fc51acfbdded2e7cbbc277efb04b0f5d463c2aa97dbf55decc",
+          "scene": {
+            "layout_id": 7,
+            "style_id": 6
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100006,
+          "policy_seed": 12351,
+          "success": false,
+          "steps": 500,
+          "seconds": 61.89393353462219,
+          "clipped_steps": 428,
+          "max_action_magnitude": 1.66646146774292,
+          "initial_state_sha256": "58235be59972ebce2a013cc11cdf7d679e45f91d519e7405fb2c5611b2f146d4",
+          "scene": {
+            "layout_id": 9,
+            "style_id": 4
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100007,
+          "policy_seed": 12352,
+          "success": false,
+          "steps": 500,
+          "seconds": 48.67146849632263,
+          "clipped_steps": 214,
+          "max_action_magnitude": 1.016611099243164,
+          "initial_state_sha256": "a6d37acd655abdea396ee26807099879b55e8f33296e590ae3b884bb83f0ef98",
+          "scene": {
+            "layout_id": 2,
+            "style_id": 2
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100008,
+          "policy_seed": 12353,
+          "success": true,
+          "steps": 279,
+          "seconds": 43.20925855636597,
+          "clipped_steps": 219,
+          "max_action_magnitude": 1.017208218574524,
+          "initial_state_sha256": "65e8bdb7fe769ef67be0da6938d1442d5984a95f34aa24b5c00e358292c7470e",
+          "scene": {
+            "layout_id": 3,
+            "style_id": 0
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100009,
+          "policy_seed": 12354,
+          "success": true,
+          "steps": 249,
+          "seconds": 46.16047739982605,
+          "clipped_steps": 167,
+          "max_action_magnitude": 1.0091392993927002,
+          "initial_state_sha256": "b1e05c2aea2d0ff4cfb58bd20d8c169232354bb00b532c18849c5c00c681169d",
+          "scene": {
+            "layout_id": 6,
+            "style_id": 5
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100010,
+          "policy_seed": 12355,
+          "success": false,
+          "steps": 500,
+          "seconds": 57.411805629730225,
+          "clipped_steps": 378,
+          "max_action_magnitude": 1.7862484455108643,
+          "initial_state_sha256": "6113d29ba021716991747900b32c58bd323e4bac8379234d3c20df765a35275e",
+          "scene": {
+            "layout_id": 7,
+            "style_id": 2
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100011,
+          "policy_seed": 12356,
+          "success": false,
+          "steps": 500,
+          "seconds": 53.84872341156006,
+          "clipped_steps": 392,
+          "max_action_magnitude": 1.7141891717910767,
+          "initial_state_sha256": "8e74a4ce3b1c31f9025a363d55787413095df597c9151019081ed8edd409ca2a",
+          "scene": {
+            "layout_id": 9,
+            "style_id": 11
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100012,
+          "policy_seed": 12357,
+          "success": false,
+          "steps": 500,
+          "seconds": 53.91690158843994,
+          "clipped_steps": 385,
+          "max_action_magnitude": 1.3245885372161865,
+          "initial_state_sha256": "3e05066f3843bd3406d21f31104130766c16dc3a9bf98e6d63f4358618ce0151",
+          "scene": {
+            "layout_id": 5,
+            "style_id": 8
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100013,
+          "policy_seed": 12358,
+          "success": true,
+          "steps": 202,
+          "seconds": 28.77931046485901,
+          "clipped_steps": 122,
+          "max_action_magnitude": 1.0346516370773315,
+          "initial_state_sha256": "cffc81ad15ac85e7b8ffd599fd6a1a697106f8845b809ec9bb5843686f996bb0",
+          "scene": {
+            "layout_id": 0,
+            "style_id": 1
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100014,
+          "policy_seed": 12359,
+          "success": false,
+          "steps": 500,
+          "seconds": 53.175060987472534,
+          "clipped_steps": 427,
+          "max_action_magnitude": 1.0125608444213867,
+          "initial_state_sha256": "8f2422f47e91ed70a34afc5a83345395bd8818c83fda6ab4e6577cf7dda931eb",
+          "scene": {
+            "layout_id": 2,
+            "style_id": 2
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100015,
+          "policy_seed": 12360,
+          "success": false,
+          "steps": 500,
+          "seconds": 56.78152894973755,
+          "clipped_steps": 380,
+          "max_action_magnitude": 1.4331586360931396,
+          "initial_state_sha256": "c6ac4e0e2572c0c2b10c644bf0e69863835d89c46082b7c30fac0dde8dfef328",
+          "scene": {
+            "layout_id": 5,
+            "style_id": 11
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100016,
+          "policy_seed": 12361,
+          "success": false,
+          "steps": 500,
+          "seconds": 55.367515087127686,
+          "clipped_steps": 209,
+          "max_action_magnitude": 1.0069530010223389,
+          "initial_state_sha256": "b0ab6396c3a886df209796b6762d3bc32f97c4ce137a84e18f60104ab050c56e",
+          "scene": {
+            "layout_id": 7,
+            "style_id": 3
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100017,
+          "policy_seed": 12362,
+          "success": true,
+          "steps": 299,
+          "seconds": 45.84505820274353,
+          "clipped_steps": 192,
+          "max_action_magnitude": 1.0087168216705322,
+          "initial_state_sha256": "0401a1a4d178cad519f93c7ea121b9f3dbc1640d5a3d96bea7e07e2a6b5f5a84",
+          "scene": {
+            "layout_id": 7,
+            "style_id": 2
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100018,
+          "policy_seed": 12363,
+          "success": true,
+          "steps": 300,
+          "seconds": 45.18211007118225,
+          "clipped_steps": 214,
+          "max_action_magnitude": 1.0451031923294067,
+          "initial_state_sha256": "ea214c23d34a0c95bb4094279268ba49753f6e092ec093f099a3b442a618bfbf",
+          "scene": {
+            "layout_id": 7,
+            "style_id": 1
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100019,
+          "policy_seed": 12364,
+          "success": false,
+          "steps": 500,
+          "seconds": 87.89782619476318,
+          "clipped_steps": 383,
+          "max_action_magnitude": 1.227786898612976,
+          "initial_state_sha256": "6a2234e6caa3f42a535665982406827a378f78df7367498d66bb1d0b12513a22",
+          "scene": {
+            "layout_id": 9,
+            "style_id": 1
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100020,
+          "policy_seed": 12365,
+          "success": false,
+          "steps": 500,
+          "seconds": 55.95066237449646,
+          "clipped_steps": 391,
+          "max_action_magnitude": 1.6848084926605225,
+          "initial_state_sha256": "fb863bacf97697acc0d7e3332605720e24950cb655c2dba1a87f38be02fc8632",
+          "scene": {
+            "layout_id": 4,
+            "style_id": 2
+          }
+        },
+        {
+          "status": "failed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100021,
+          "error": "AssertionError('reset already satisfies success; invalid evaluation initialization')",
+          "seconds": 20.531949281692505
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100022,
+          "policy_seed": 12367,
+          "success": false,
+          "steps": 500,
+          "seconds": 53.31871294975281,
+          "clipped_steps": 325,
+          "max_action_magnitude": 1.093443512916565,
+          "initial_state_sha256": "9ef0a5beaba1286aeb7d43a2406468605515aa8cbef47dc9d409f1097c41c793",
+          "scene": {
+            "layout_id": 2,
+            "style_id": 2
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100023,
+          "policy_seed": 12368,
+          "success": false,
+          "steps": 500,
+          "seconds": 49.7620906829834,
+          "clipped_steps": 297,
+          "max_action_magnitude": 1.2081959247589111,
+          "initial_state_sha256": "e1c607fbe8cafbdde3cc8ea10abd14c168ffbca6f74d2d58f8ac3d416dbc438a",
+          "scene": {
+            "layout_id": 5,
+            "style_id": 8
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100024,
+          "policy_seed": 12369,
+          "success": false,
+          "steps": 500,
+          "seconds": 62.63279747962952,
+          "clipped_steps": 338,
+          "max_action_magnitude": 1.011579990386963,
+          "initial_state_sha256": "184d258dda0243fd95e32e897382a1c789f3c0a381793b814e8d86c3fdd450ff",
+          "scene": {
+            "layout_id": 9,
+            "style_id": 5
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100025,
+          "policy_seed": 12370,
+          "success": true,
+          "steps": 253,
+          "seconds": 42.00292444229126,
+          "clipped_steps": 176,
+          "max_action_magnitude": 1.1607205867767334,
+          "initial_state_sha256": "e89156e20f8a80854d1f11710cce016f1fc3c7193c061b8604206a6e5c436597",
+          "scene": {
+            "layout_id": 1,
+            "style_id": 6
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100026,
+          "policy_seed": 12371,
+          "success": false,
+          "steps": 500,
+          "seconds": 52.96561241149902,
+          "clipped_steps": 244,
+          "max_action_magnitude": 1.0060356855392456,
+          "initial_state_sha256": "2f7b4b9f69f8faf75eb9d090a438a120884bdee685694c04f9b46abf77049234",
+          "scene": {
+            "layout_id": 1,
+            "style_id": 1
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100027,
+          "policy_seed": 12372,
+          "success": false,
+          "steps": 500,
+          "seconds": 64.25047016143799,
+          "clipped_steps": 207,
+          "max_action_magnitude": 1.0371642112731934,
+          "initial_state_sha256": "08e3714b72f20c6b558245f356c50bef4811eab86d19229b063bfcd2da0cfb7e",
+          "scene": {
+            "layout_id": 6,
+            "style_id": 5
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100028,
+          "policy_seed": 12373,
+          "success": false,
+          "steps": 500,
+          "seconds": 55.119924545288086,
+          "clipped_steps": 353,
+          "max_action_magnitude": 1.7671043872833252,
+          "initial_state_sha256": "fd0660d0f441e07dc4dc39c04deadafc35dddf7222b328cd9a6e55e4008af2dc",
+          "scene": {
+            "layout_id": 1,
+            "style_id": 11
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100029,
+          "policy_seed": 12374,
+          "success": false,
+          "steps": 500,
+          "seconds": 91.7914309501648,
+          "clipped_steps": 273,
+          "max_action_magnitude": 1.0072752237319946,
+          "initial_state_sha256": "acd050ca50f2de7b46e2d8d7222718bb4b6c98498b32d2ef4f29cef39b3bddab",
+          "scene": {
+            "layout_id": 8,
+            "style_id": 11
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100030,
+          "policy_seed": 12375,
+          "success": false,
+          "steps": 500,
+          "seconds": 59.80236458778381,
+          "clipped_steps": 276,
+          "max_action_magnitude": 1.0187814235687256,
+          "initial_state_sha256": "0cf375060f5e5f074e797b5c04fa5d0c66c5250be882bc1c2835226ebc8bf051",
+          "scene": {
+            "layout_id": 8,
+            "style_id": 2
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100031,
+          "policy_seed": 12376,
+          "success": false,
+          "steps": 500,
+          "seconds": 51.19943451881409,
+          "clipped_steps": 268,
+          "max_action_magnitude": 1.2324849367141724,
+          "initial_state_sha256": "fcf9b53063874e7c2e845b773d3409becdf882902dfd36f872f261ba12556160",
+          "scene": {
+            "layout_id": 0,
+            "style_id": 2
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100032,
+          "policy_seed": 12377,
+          "success": false,
+          "steps": 500,
+          "seconds": 53.10441255569458,
+          "clipped_steps": 373,
+          "max_action_magnitude": 1.138791799545288,
+          "initial_state_sha256": "5a122fd62622d717b70753e1c3ae4a991d5f52e2c09c0005ed60dbb1698a85a0",
+          "scene": {
+            "layout_id": 9,
+            "style_id": 8
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100033,
+          "policy_seed": 12378,
+          "success": true,
+          "steps": 250,
+          "seconds": 39.02592349052429,
+          "clipped_steps": 162,
+          "max_action_magnitude": 1.0107184648513794,
+          "initial_state_sha256": "0771ba459408b7649fdf5a924621f3f62d9ca05762ed1dc0d489b4035fc7ad9a",
+          "scene": {
+            "layout_id": 7,
+            "style_id": 8
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100034,
+          "policy_seed": 12379,
+          "success": false,
+          "steps": 500,
+          "seconds": 50.96487212181091,
+          "clipped_steps": 395,
+          "max_action_magnitude": 1.487758755683899,
+          "initial_state_sha256": "2c32c04971fc052b45a63d4906bbd18f452de12c9440be8ae776256345f02251",
+          "scene": {
+            "layout_id": 2,
+            "style_id": 2
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100035,
+          "policy_seed": 12380,
+          "success": false,
+          "steps": 500,
+          "seconds": 51.46028542518616,
+          "clipped_steps": 258,
+          "max_action_magnitude": 1.011519432067871,
+          "initial_state_sha256": "f43b166ec66edf4c118f56cf78e364d8773ec62927c61458bfd1d4e83ad3d405",
+          "scene": {
+            "layout_id": 1,
+            "style_id": 4
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100036,
+          "policy_seed": 12381,
+          "success": false,
+          "steps": 500,
+          "seconds": 51.822723388671875,
+          "clipped_steps": 354,
+          "max_action_magnitude": 1.6322212219238281,
+          "initial_state_sha256": "c5adc8389aa9ed4d3745383490d5ee7be45378521807137d8a6908efc0db8407",
+          "scene": {
+            "layout_id": 3,
+            "style_id": 2
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100037,
+          "policy_seed": 12382,
+          "success": false,
+          "steps": 500,
+          "seconds": 54.07440733909607,
+          "clipped_steps": 325,
+          "max_action_magnitude": 1.7285677194595337,
+          "initial_state_sha256": "88c36ab8d308cb350777cee040ca5ca9b8c9b8a9577ba4f1824141c327a37dd4",
+          "scene": {
+            "layout_id": 3,
+            "style_id": 6
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100038,
+          "policy_seed": 12383,
+          "success": false,
+          "steps": 500,
+          "seconds": 53.82826089859009,
+          "clipped_steps": 369,
+          "max_action_magnitude": 1.65482759475708,
+          "initial_state_sha256": "ee2a1e0b25847454a5269906ab2fd9c6a2c45741c8b8366951fd4535df43914c",
+          "scene": {
+            "layout_id": 2,
+            "style_id": 11
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100039,
+          "policy_seed": 12384,
+          "success": true,
+          "steps": 282,
+          "seconds": 34.22501993179321,
+          "clipped_steps": 198,
+          "max_action_magnitude": 1.009381890296936,
+          "initial_state_sha256": "450b6cd64edf129e65fe048f6fc63b55959531687da69fdd8d58a71324be1ca2",
+          "scene": {
+            "layout_id": 2,
+            "style_id": 8
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100040,
+          "policy_seed": 12385,
+          "success": true,
+          "steps": 241,
+          "seconds": 37.10109186172485,
+          "clipped_steps": 183,
+          "max_action_magnitude": 1.0077159404754639,
+          "initial_state_sha256": "957f9cb61877aebf11d041f81e83745500a3d54282b08798cb9e1963ab5f43b0",
+          "scene": {
+            "layout_id": 3,
+            "style_id": 2
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100041,
+          "policy_seed": 12386,
+          "success": true,
+          "steps": 258,
+          "seconds": 41.374321699142456,
+          "clipped_steps": 164,
+          "max_action_magnitude": 1.0061885118484497,
+          "initial_state_sha256": "aae6afb713b980d1dbb4137a02a72652c69c98bb45c21dc1fc29ac4f738d8ff4",
+          "scene": {
+            "layout_id": 7,
+            "style_id": 11
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100042,
+          "policy_seed": 12387,
+          "success": false,
+          "steps": 500,
+          "seconds": 84.75423622131348,
+          "clipped_steps": 402,
+          "max_action_magnitude": 1.0096715688705444,
+          "initial_state_sha256": "daec57b7c152e001e53549ead9ade2a76373a0f57c6a5cf3a612924374479009",
+          "scene": {
+            "layout_id": 5,
+            "style_id": 3
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100043,
+          "policy_seed": 12388,
+          "success": false,
+          "steps": 500,
+          "seconds": 51.27905035018921,
+          "clipped_steps": 384,
+          "max_action_magnitude": 1.6950435638427734,
+          "initial_state_sha256": "bc66721b8d0d9cd3e0fd50bf04e63edbff80e36c9d7bf2fd1f9fd3a52ec604db",
+          "scene": {
+            "layout_id": 2,
+            "style_id": 7
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100044,
+          "policy_seed": 12389,
+          "success": false,
+          "steps": 500,
+          "seconds": 57.22990894317627,
+          "clipped_steps": 282,
+          "max_action_magnitude": 1.010239601135254,
+          "initial_state_sha256": "65cba073ba7328a6c9961061cb7655db2e5b8756480bd4db970d9149c20100a8",
+          "scene": {
+            "layout_id": 7,
+            "style_id": 8
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100045,
+          "policy_seed": 12390,
+          "success": false,
+          "steps": 500,
+          "seconds": 45.47408938407898,
+          "clipped_steps": 295,
+          "max_action_magnitude": 1.397793173789978,
+          "initial_state_sha256": "3ce68b9b70496b0c1b2128034e8d2382b9c15478294addc5394f1bd3c0b51324",
+          "scene": {
+            "layout_id": 0,
+            "style_id": 8
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100046,
+          "policy_seed": 12391,
+          "success": true,
+          "steps": 297,
+          "seconds": 39.92895746231079,
+          "clipped_steps": 198,
+          "max_action_magnitude": 1.0089958906173706,
+          "initial_state_sha256": "8baa4471705bbb5f905b5bc2c023393ec09da3c7bf6c22fc4ad735b0849640bf",
+          "scene": {
+            "layout_id": 7,
+            "style_id": 1
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100047,
+          "policy_seed": 12392,
+          "success": false,
+          "steps": 500,
+          "seconds": 41.94832706451416,
+          "clipped_steps": 304,
+          "max_action_magnitude": 1.4100792407989502,
+          "initial_state_sha256": "7bc3504e08ddff9b3834e730fa617673537cd2611230ecdca941ae82bc5086f1",
+          "scene": {
+            "layout_id": 0,
+            "style_id": 8
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100048,
+          "policy_seed": 12393,
+          "success": false,
+          "steps": 500,
+          "seconds": 54.304208755493164,
+          "clipped_steps": 234,
+          "max_action_magnitude": 1.0096068382263184,
+          "initial_state_sha256": "51592acb707a971fca5661426f01079f12cd17477889f2516fc6123490ec471c",
+          "scene": {
+            "layout_id": 3,
+            "style_id": 7
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100049,
+          "policy_seed": 12394,
+          "success": true,
+          "steps": 280,
+          "seconds": 49.38490867614746,
+          "clipped_steps": 154,
+          "max_action_magnitude": 1.0077660083770752,
+          "initial_state_sha256": "97f8f1019141fc6f425d0afcea9e4db03bd00c6538e90da77f251bdc3950468d",
+          "scene": {
+            "layout_id": 6,
+            "style_id": 7
+          }
+        },
+        {
+          "status": "completed",
+          "model": "bsp",
+          "epoch": 380,
+          "seed": 100050,
+          "policy_seed": 12395,
+          "success": true,
+          "steps": 216,
+          "seconds": 34.84343338012695,
+          "clipped_steps": 172,
+          "max_action_magnitude": 1.0535677671432495,
+          "initial_state_sha256": "908a53301415d96f636fb08d92fd6637fe2773bc5f4c9d6f3a4742d99463931c",
+          "scene": {
+            "layout_id": 7,
+            "style_id": 4
+          }
+        }
+      ]
+    }
+  },
+  "paired_outcomes": {
+    "both_success": 12,
+    "dense_only": 19,
+    "bsp_only": 4
+  }
+}

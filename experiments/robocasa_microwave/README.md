@@ -41,3 +41,12 @@ The old mobile robot environment is pinned separately by `scripts/prepare_eval_s
 Place stable, independent checkpoint copies at `outputs/rollout_mid/checkpoints/{dense,bsp}.ckpt`; do not evaluate files while saving. `scripts/launch_rollout_mid.py` checks paired reset state hashes, both policy forward passes and successful replay of validation demo 4, then evaluates 50 seeds per policy across four shards on GPUs 0/2. It uses EMA, 20 Hz control, 500 steps and an execution cap of 8 actions.
 
 Spline knot repair follows the upstream deployment `safer_knots` rule; sampling uses frame-index times with the current history frame at time 1, clamped to the valid half-open domain to avoid padded endpoint artifacts. This is an explicit simulation adapter, not a verified paper evaluation protocol. Video is recorded for the first two episodes.
+
+## Measured interim result (epoch 380)
+
+| Model | Successes / valid tests | Success rate | Paper Table 2(a) |
+| --- | --- | --- | --- |
+| Dense DP | 31 / 50 | 62% | 77% |
+| BSP-DP | 16 / 50 | 32% | 89% |
+
+All 50 paired initial state hashes match. Seed 100021 initially satisfied success before any policy action; both models exclude it and use seed 100050 instead. No runtime failures remain. Detailed episodes, Wilson confidence intervals and protocol limits are in `reports/rollout_interim_comparison.json`. This intermediate, single-seed, 20 Hz result does not reproduce the paper's reported BSP benefit or its stated 100 Hz sampling protocol. Final training is still in progress.
